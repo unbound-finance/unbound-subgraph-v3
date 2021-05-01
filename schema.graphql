@@ -1,6 +1,9 @@
-type ExampleEntity @entity {
+type NftToken @entity {
   id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  approved: Bytes! # address
+  userAddress: Bytes! #address
+  tokenId: BigInt!
+  liquidity: BigInt!
+  amount0: BigInt!
+  amount1: BigInt!
+  isBurned: Boolean!
 }
