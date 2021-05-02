@@ -62,7 +62,7 @@ export function handleTransfer(event: Transfer): void {
     nft = new NftToken(id);
   }
   if (
-    event.params.to.toString() == ADDRESS_ZERO &&
+    event.params.to.toHexString() == ADDRESS_ZERO &&
     event.params.tokenId == nft.tokenId
   ) {
     nft.isBurned = true;
